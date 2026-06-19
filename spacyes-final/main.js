@@ -1,0 +1,129 @@
+document.addEventListener('DOMContentLoaded',function(){
+  // hamburger
+  var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+  if(burger&&mnav){burger.addEventListener('click',function(){mnav.classList.toggle('open')})}
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.nextElementSibling,open=a.classList.contains('open');
+      document.querySelectorAll('.faq-a').forEach(function(x){x.classList.remove('open')});
+      document.querySelectorAll('.faq-q').forEach(function(x){x.setAttribute('aria-expanded','false')});
+      if(!open){a.classList.add('open');btn.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  // plan tabs
+  document.querySelectorAll('.ptab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.ptab').forEach(function(t){t.classList.remove('on')});
+      tab.classList.add('on');
+      var target=tab.dataset.tab;
+      document.querySelectorAll('.plans-panel').forEach(function(p){
+        p.style.display=p.dataset.panel===target?'grid':'none';
+      });
+    });
+  });
+
+  // pill toggles (branch + plan)
+  document.querySelectorAll('.pill-group').forEach(function(group){
+    group.querySelectorAll('.pill').forEach(function(pill){
+      pill.addEventListener('click',function(){
+        group.querySelectorAll('.pill').forEach(function(p){p.classList.remove('on')});
+        pill.classList.add('on');
+        var hidden=group.nextElementSibling;
+        if(hidden&&hidden.type==='hidden') hidden.value=pill.dataset.val;
+      });
+    });
+  });
+
+  // review filter tabs
+  document.querySelectorAll('.rev-ftag').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.rev-ftag').forEach(function(b){b.classList.remove('on')});
+      btn.classList.add('on');
+    });
+  });
+
+  // hero carousel (right side)
+  var hc=document.getElementById('hero-carousel');
+  if(hc){
+    var hSlides=hc.querySelectorAll('.hc-slide');
+    var hTotal=hSlides.length,hCur=0;
+    function hGoTo(n){hCur=(n+hTotal)%hTotal;hc.style.transform='translateX(-'+hCur*100+'%)';}
+    setInterval(function(){hGoTo(hCur+1);},3000);
+  }
+
+  // carousel (gallery section)
+  var carousel=document.getElementById('carousel');
+  if(carousel){
+    var slides=carousel.querySelectorAll('.carousel-slide');
+    var total=slides.length;
+    var current=0;
+    var dotsWrap=document.getElementById('carousel-dots');
+    // build dots
+    for(var i=0;i<total;i++){
+      var dot=document.createElement('button');
+      dot.className='carousel-dot'+(i===0?' on':'');
+      dot.dataset.idx=i;
+      dot.addEventListener('click',function(){goTo(parseInt(this.dataset.idx))});
+      dotsWrap.appendChild(dot);
+    }
+    function goTo(n){
+      current=(n+total)%total;
+      carousel.style.transform='translateX(-'+current*100+'%)';
+      dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d,i){
+        d.classList.toggle('on',i===current);
+      });
+    }
+    document.getElementById('carousel-prev').addEventListener('click',function(){goTo(current-1)});
+    document.getElementById('carousel-next').addEventListener('click',function(){goTo(current+1)});
+    // auto-advance
+    setInterval(function(){goTo(current+1)},4000);
+  }
+
+  // forms
+  function wireForm(formId){
+    var form=document.getElementById(formId);
+    if(!form)return;
+    function get(){
+      var d={};
+      form.querySelectorAll('[name]').forEach(function(el){d[el.name]=el.value.trim()});
+      // also read pill selections
+      var bp=form.querySelector('#branch-val');
+      var pp=form.querySelector('#plan-val');
+      if(bp) d.branch=bp.value;
+      if(pp) d.plan=pp.value;
+      return d;
+    }
+    var wab=form.querySelector('.fwa'),emb=form.querySelector('.fem');
+    if(wab){wab.addEventListener('click',function(e){
+      e.preventDefault();var d=get();
+      if(!d.name||!d.phone){alert('Please enter your name and phone.');return}
+      var msg='Hi Spacyes!\n\nName: '+d.name+'\nPhone: '+d.phone;
+      if(d.branch)msg+='\nBranch: '+d.branch;
+      if(d.plan)msg+='\nPlan: '+d.plan;
+      if(d.city)msg+='\nCity: '+d.city;
+      if(d.investment)msg+='\nInvestment: '+d.investment;
+      if(d.about)msg+='\nAbout: '+d.about;
+      if(d.message)msg+='\nMessage: '+d.message;
+      window.open('https://wa.me/919869622564?text='+encodeURIComponent(msg),'_blank');
+    })}
+    if(emb){emb.addEventListener('click',function(e){
+      e.preventDefault();var d=get();
+      if(!d.name||!d.phone){alert('Please enter your name and phone.');return}
+      var body='Name: '+d.name+'\nPhone: '+d.phone;
+      if(d.branch)body+='\nBranch: '+d.branch;
+      if(d.plan)body+='\nPlan: '+d.plan;
+      if(d.city)body+='\nCity: '+d.city;
+      if(d.investment)body+='\nInvestment: '+d.investment;
+      if(d.about)body+='\nAbout: '+d.about;
+      if(d.message)body+='\nMessage: '+d.message;
+      var subj=d.city?'Franchise Enquiry — Spacyes':'Trial Booking — Spacyes';
+      window.location.href='mailto:info@spacyes.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    })}
+  }
+  wireForm('form-home');
+  wireForm('form-franchise');
+  wireForm('form-branch');
+});
