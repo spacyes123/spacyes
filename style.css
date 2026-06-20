@@ -280,3 +280,9 @@ footer{background:var(--brand);padding:56px 0 26px}
   .carousel-prev{left:14px}
   .carousel-next{right:14px}
 }
+
+/* Social icons in footer */
+.ft-social{display:flex;gap:10px;margin-top:16px}
+.ft-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ft-social a:hover{background:rgba(255,255,255,.28)}
+.ft-social svg{width:18px;height:18px;fill:#fff}
