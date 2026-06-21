@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded',function(){
+  // de-obfuscate email links (anti-scraper protection)
+  document.querySelectorAll('.email-link').forEach(function(link){
+    var user=link.dataset.user, domain=link.dataset.domain;
+    if(user&&domain){
+      var addr=user+'@'+domain;
+      link.href='mailto:'+addr;
+      var span=link.querySelector('.email-text');
+      if(span) span.textContent=addr;
+    }
+  });
+
   // hamburger
   var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
   if(burger&&mnav){burger.addEventListener('click',function(){mnav.classList.toggle('open')})}

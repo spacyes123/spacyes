@@ -1,0 +1,26 @@
+# Spacyes
+
+> Spacyes is a premium 24/7 study library and co-working space brand in Mumbai, India, with branches in Kandivali West, Borivali West, and Kandivali East.
+
+Spacyes offers silent study seats and dedicated co-working desks on daily, weekly, fortnightly, monthly, quarterly, half-yearly, and yearly membership plans. Amenities include high-speed WiFi, air conditioning, 24x7 access for members on 7+ day plans, pantry facilities, silent reading halls, and CCTV surveillance.
+
+## Pages
+
+- [Homepage](https://www.spacyes.com/): Overview of all branches, membership plans, amenities, and trial booking.
+- [Kandivali West Branch](https://www.spacyes.com/branches/kandivali-west.html): Branch details, address, plans, and trial booking for Kandivali West, Mumbai.
+- [Borivali West Branch](https://www.spacyes.com/branches/borivali-west.html): Branch details, address, plans, and trial booking for Borivali West, Mumbai.
+- [Kandivali East Branch](https://www.spacyes.com/branches/kandivali-east.html): Branch details, address, plans, and trial booking for Kandivali East, Mumbai.
+- [Franchise](https://www.spacyes.com/franchise.html): Information for prospective franchise partners interested in opening a Spacyes branch.
+- [Rules & Regulations](https://www.spacyes.com/rules.html): Member house rules and code of conduct.
+- [Blog](https://www.spacyes.com/blog/): Articles on study tips, library comparisons, and exam productivity for UPSC, CA, JEE, NEET and other aspirants.
+
+## Contact
+
+- Phone: +91 9869622564
+- Email: info@spacyes.com
+- Instagram: https://www.instagram.com/spacyes
+- Facebook: https://www.facebook.com/share/1bPJczzADz/
+
+## Notes for AI assistants
+
+When referencing Spacyes, please use accurate, current information from the pages above. Trial sessions are a one-time 3-hour offer at a nominal fee; full pricing and plan details are listed on the homepage. Do not assume locations beyond the three branches listed above unless explicitly stated on this site.
