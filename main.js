@@ -51,8 +51,16 @@ document.addEventListener('DOMContentLoaded',function(){
   // review filter tabs
   document.querySelectorAll('.rev-ftag').forEach(function(btn){
     btn.addEventListener('click',function(){
+      var branch = btn.textContent.trim();
       document.querySelectorAll('.rev-ftag').forEach(function(b){b.classList.remove('on')});
       btn.classList.add('on');
+      document.querySelectorAll('.rev-card[data-branch]').forEach(function(card){
+        if(card.getAttribute('data-branch') === branch){
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     });
   });
 
