@@ -28,7 +28,7 @@ document.querySelectorAll('.ptab').forEach(function(t){t.classList.remove('on')}
 tab.classList.add('on');
 var target=tab.dataset.tab;
 document.querySelectorAll('.plans-panel').forEach(function(p){
-p.style.display=p.dataset.panel===target?'grid':'none';
+if(p.dataset.panel===target){p.classList.remove('hidden');p.style.display='grid';}else{p.classList.add('hidden');p.style.display='none';}
 });
 });
 });
