@@ -134,7 +134,18 @@ var subj=d.city?'Franchise Enquiry — Spacyes':'Trial Booking — Spacyes';
 window.location.href='mailto:info@spacyes.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
 })}
 }
-wireForm('form-home');
-wireForm('form-franchise');
-wireForm('form-branch');
+document.querySelectorAll('.form-wrap[id]').forEach(function(form){wireForm(form.id)});
+(function(){
+  var path=window.location.pathname;
+  var prefix=(path.indexOf('/branches/')!==-1||path.indexOf('/blog/')!==-1)?'../':'';
+  if(!document.querySelector('.mobile-action-bar')){
+    var bar=document.createElement('div');bar.className='mobile-action-bar';bar.setAttribute('aria-label','Quick contact actions');
+    bar.innerHTML='<a href="'+prefix+'index.html#plans">View Plans</a><a href="tel:+919869622564">Call</a><a class="wa-action" href="https://wa.me/919869622564?text='+encodeURIComponent('Hi Spacyes, I need help choosing a membership plan.')+'" target="_blank" rel="noopener">WhatsApp</a>';
+    document.body.appendChild(bar);
+  }
+  if(!document.querySelector('.wa-help')){
+    var help=document.createElement('div');help.className='wa-help';help.innerHTML='<button class="wa-help-close" aria-label="Close">×</button><strong>Need help choosing a plan?</strong><a href="https://wa.me/919869622564?text='+encodeURIComponent('Hi Spacyes, please help me choose the right plan.')+'" target="_blank" rel="noopener">Chat with us →</a>';
+    help.querySelector('.wa-help-close').addEventListener('click',function(){help.remove()});document.body.appendChild(help);
+  }
+})();
 });
