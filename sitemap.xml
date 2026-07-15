@@ -2,122 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.spacyes.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/branches/kandivali-west.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/branches/borivali-west.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/branches/kandivali-east.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/franchise.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/managed-office.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://www.spacyes.com/library.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://www.spacyes.com/coworking.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-11</lastmod>
   </url>
   <url>
-    <loc>https://www.spacyes.com/rules.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-      <lastmod>2026-07-07</lastmod>
+    <loc>https://www.spacyes.com/branches/kandivali-west.html</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://www.spacyes.com/blog/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <lastmod>2026-07-07</lastmod>
+    <loc>https://www.spacyes.com/branches/kandivali-east.html</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://www.spacyes.com/blog/best-study-library-kandivali-west-borivali-west-kandivali-east.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/library-vs-studying-at-home-vs-public-library.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/how-ca-jee-neet-upsc-students-stay-productive.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/how-long-should-i-study.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/should-i-study-at-night.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/how-to-stay-focused-while-studying.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/is-studying-in-library-better-than-home.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.spacyes.com/blog/can-background-noise-reduce-concentration.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.spacyes.com/branches/borivali-west.html</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://www.spacyes.com/about.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-11</lastmod>
   </url>
   <url>
     <loc>https://www.spacyes.com/success-stories.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/managed-office.html</loc>
+    <lastmod>2026-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/franchise.html</loc>
+    <lastmod>2026-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/rules.html</loc>
+    <lastmod>2026-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/best-study-library-kandivali-west-borivali-west-kandivali-east.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/library-vs-studying-at-home-vs-public-library.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/how-ca-jee-neet-upsc-students-stay-productive.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/how-long-should-i-study.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/should-i-study-at-night.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/how-to-stay-focused-while-studying.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/is-studying-in-library-better-than-home.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.spacyes.com/blog/can-background-noise-reduce-concentration.html</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
 </urlset>
