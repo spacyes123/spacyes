@@ -21,8 +21,7 @@
 <meta name="theme-color" content="#E94B2C"/>
 <title>Co-Working Space in Mumbai — Kandivali &amp; Borivali | Spacyes</title>
 <link rel="apple-touch-icon" href="spacyes-logo.png"/>
-  <link rel="preload" href="style.css" as="style"/>
-  <link rel="icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.ico"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -35,31 +34,35 @@
 <body>
 <nav>
   <div class="nav-in">
-    <a href="/" class="nav-logo"><img src="spacyes-logo.png" alt="Spacyes" width="200" height="44"/><span class="tm">™</span></a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
+    <a href="index.html" class="nav-logo"><img src="spacyes-logo.png" alt="Spacyes" width="200" height="44"/><span class="tm">™</span></a>
+        <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="index.html#branches">Branches</a></li>
       <li><a href="index.html#plans">Plans</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
       <li><a href="managed-office.html">Managed Office</a></li>
       <li><a href="franchise.html">Franchise</a></li>
-      <li><a href="index.html#trial" class="nav-cta">Book Trial</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="mnav" id="mnav">
-    <a href="/">Home</a>
+    <div class="mnav" id="mnav">
+    <a href="index.html">Home</a>
+    <a href="index.html#branches">Branches</a>
     <a href="index.html#plans">Plans</a>
-    <a href="/blog/">Blog</a>
+    <a href="blog/index.html">Blog</a>
     <a href="managed-office.html">Managed Office</a>
     <a href="franchise.html">Franchise</a>
+    <a href="about.html">About</a>
+    <a href="success-stories.html">Success Stories</a>
     <a href="index.html#trial" class="brand-link-bold">Book Trial</a>
   </div>
 </nav>
 
 <div class="phero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="/">Home</a> / Co-Working</div>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Co-Working</div>
     <p class="s-label">Co-Working Space · Mumbai</p>
     <h1 class="phero-h1">Your desk.<br>Our space.<br><span style="color:var(--brand)">Zero distractions.</span></h1>
     <p class="phero-sub">Spacyes co-working desks are built for freelancers, remote workers, WFH professionals and corporate teams who need a quiet, reliable workspace in Mumbai — without a long-term commitment.</p>
@@ -128,7 +131,7 @@
     <h2 class="s-title">Co-working desks across 3 Mumbai branches.</h2>
     <div class="branch-grid" style="margin-top:32px">
       <div class="branch-card">
-        <picture><source srcset="images/spacyes-kandivali-west-1.webp" type="image/webp"/><img style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;" src="images/spacyes-kandivali-west-1.jpg" alt="Spacyes co-working space Kandivali West" class="branch-img" width="1080" height="718" loading="lazy"/></picture>
+        <picture><source srcset="images/spacyes-kandivali-west-1.webp" type="image/webp"/><img src="images/spacyes-kandivali-west-1.jpg" alt="Spacyes co-working space Kandivali West" class="branch-img" loading="lazy"/></picture>
         <div class="branch-info">
           <h3>Kandivali West</h3>
           <p>Modi House, 2/11, Pragati Society, Behind Nandu Dosa, Mahavir Nagar</p>
@@ -136,7 +139,7 @@
         </div>
       </div>
       <div class="branch-card">
-        <picture><source srcset="images/spacyes-borivali-west-1.webp" type="image/webp"/><img style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;" src="images/spacyes-borivali-west-1.jpg" alt="Spacyes co-working space Borivali West" class="branch-img" width="1080" height="744" loading="lazy"/></picture>
+        <picture><source srcset="images/spacyes-borivali-west-1.webp" type="image/webp"/><img src="images/spacyes-borivali-west-1.jpg" alt="Spacyes co-working space Borivali West" class="branch-img" loading="lazy"/></picture>
         <div class="branch-info">
           <h3>Borivali West</h3>
           <p>1st Floor, B/2, Bharat Baug, Lancelot, SV Road, Opp. Kalyan Jewellers</p>
@@ -144,7 +147,7 @@
         </div>
       </div>
       <div class="branch-card">
-        <picture><source srcset="images/spacyes-kandivali-east-1.webp" type="image/webp"/><img style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;" src="images/spacyes-kandivali-east-1.jpg" alt="Spacyes co-working space Kandivali East" class="branch-img" width="1080" height="812" loading="lazy"/></picture>
+        <picture><source srcset="images/spacyes-kandivali-east-1.webp" type="image/webp"/><img src="images/spacyes-kandivali-east-1.jpg" alt="Spacyes co-working space Kandivali East" class="branch-img" loading="lazy"/></picture>
         <div class="branch-info">
           <h3>Kandivali East</h3>
           <p>1st Floor, 3 Singh Estate, Opp Thakur College Gate No. 6, Thakur Village</p>
@@ -168,39 +171,58 @@
   </div>
 </section>
 
-<footer>
+<footer id="contact">
   <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
         <div class="ft-logo"><img src="spacyes-logo.png" alt="Spacyes" width="200" height="44"/><span class="tm">™</span></div>
-        <p>Mumbai's premium study library &amp; co-working sanctum. Quiet, focused, engineered for serious learners.</p>
+        <p>Spacyes™ is Mumbai's premium study library and co-working sanctum — engineered for serious learners across Kandivali &amp; Borivali.</p>
         <div class="ft-contact">
-          <a href="#" class="email-link" data-user="info" data-domain="spacyes.com"><span class="email-text"></span></a>
-          <a href="https://wa.me/919869622564" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+91-9869622564">📞 +91 9869622564</a>
+          <a href="#" class="email-link" data-user="info" data-domain="spacyes.com">✉️ <span class="email-text"></span></a>
+          <a href="https://wa.me/919869622564" target="_blank" rel="noopener" class="ft-wa">💬 WhatsApp Us</a>
         </div>
         <div class="ft-social">
-          <a href="https://www.instagram.com/spacyes?igsh=NWFya284dnhpaDIz" target="_blank" rel="noopener" aria-label="Spacyes on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C20.32 1.35 19.65.94 18.86.63c-.76-.3-1.64-.5-2.91-.56C14.67.01 14.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
-          <a href="https://www.facebook.com/share/1bPJczzADz/" target="_blank" rel="noopener" aria-label="Spacyes on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.25h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.instagram.com/spacyes?igsh=NWFya284dnhpaDIz" target="_blank" rel="noopener" aria-label="Spacyes on Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C20.32 1.35 19.65.94 18.86.63c-.76-.3-1.64-.5-2.91-.56C14.67.01 14.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1bPJczzADz/" target="_blank" rel="noopener" aria-label="Spacyes on Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.25h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
         </div>
+
       </div>
       <div class="ft-col">
         <h4>Branches</h4>
         <ul>
-          <li><a href="branches/kandivali-west.html">Kandivali West</a></li>
-          <li><a href="branches/borivali-west.html">Borivali West</a></li>
-          <li><a href="branches/kandivali-east.html">Kandivali East</a></li>
+          <li>
+            <a href="branches/kandivali-west.html">Kandivali West</a>
+            <div class="ft-addr">Modi House, 2/11, Pragati Society, Behind Nandu Dosa, Mahavir Nagar, Kandivali West, Mumbai 400067</div>
+            <a href="https://g.co/kgs/nCx42qL" target="_blank" rel="noopener" class="ft-dir">Get Directions →</a>
+          </li>
+          <li class="mt-12">
+            <a href="branches/borivali-west.html">Borivali West</a>
+            <div class="ft-addr">1st Floor, B/2, Bharat Baug, Lancelot, SV Road, Opp. Kalyan Jewellers, Borivali West, Mumbai 400092</div>
+            <a href="https://g.co/kgs/QNcgnEK" target="_blank" rel="noopener" class="ft-dir">Get Directions →</a>
+          </li>
+          <li class="mt-12">
+            <a href="branches/kandivali-east.html">Kandivali East</a>
+            <div class="ft-addr">1st Floor, 3 Singh Estate, Opp Thakur College Gate No. 6, Thakur Village, Kandivali East, Mumbai 400101</div>
+            <a href="https://g.co/kgs/Qgb7v2f" target="_blank" rel="noopener" class="ft-dir">Get Directions →</a>
+          </li>
         </ul>
       </div>
       <div class="ft-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="index.html#plans">Plans</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="library.html">Library</a></li>
           <li><a href="coworking.html">Co-Working</a></li>
-          <li><a href="/blog/">Blog</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
           <li><a href="managed-office.html">Managed Office</a></li>
-          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="franchise.html">Franchise</a></li><li><a href="about.html">About</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
           <li><a href="rules.html">Rules</a></li>
         </ul>
       </div>

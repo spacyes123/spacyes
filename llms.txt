@@ -1,69 +1,40 @@
 # Spacyes
 
-> Spacyes is a premium 24/7 study library and co-working space brand in Mumbai, India, with three branches in Kandivali West, Borivali West, and Kandivali East.
+> Spacyes is a premium study library and co-working space brand in Mumbai, India, founded in 2015 by Harsh Modi. It operates three branches: Kandivali West, Borivali West and Kandivali East.
 
-Spacyes offers silent study seats and dedicated co-working desks on daily, weekly, fortnightly, monthly, quarterly, half-yearly, and yearly membership plans. Amenities include high-speed WiFi, air conditioning, 24×7 access for members on eligible plans, pantry facilities, silent reading halls, book racks, RO filter water, charging sockets, gender-based washrooms, and 24×7 CCTV surveillance. A one-time 3-hour trial is available at ₹49.
+Last updated: 2026-07-15
 
-## Membership Plans
-
-### Study Library
-- Day Pass: ₹199 / 1 day
-- Weekly: ₹999 / 7 days
-- Fortnightly: ₹1,799 / 14 days
-- Weekend Pass: ₹1,499 / Saturdays & Sundays in 30 days
-- Monthly: ₹2,999 / 30 days
-- Any 30 Days: ₹4,799 / any 30 days within 180 days
-- Quarterly: ₹7,999 / 90 days
-- Half-Yearly: ₹14,999 / 180 days
-- Yearly: ₹24,999 / 360 days
-
-### Co-Working
-- Daily Desk: ₹400 / 1 day
-- Monthly Desk: ₹5,000 / 30 days
-- Note: No calls allowed inside at Kandivali East branch
-
-### Access Hours
-- Walk-in visits & registrations: 10:00 AM – 8:00 PM daily
-- Member access: 24×7 for eligible plans (weekly and above)
-- Short-term plans: 6:30 AM – 11:00 PM
-
-## Branches
-
-### Spacyes Kandivali West
-- Address: Modi House, 2/11, Pragati Society, Behind Nandu Dosa, Mahavir Nagar, Kandivali West, Mumbai 400067
-- Google Rating: 4.7★ (137 reviews)
-- Nearby areas: Mahavir Nagar, Charkop, Charkop Gaon, Poisar, Akurli Road, Kandivali Station, Link Road, SV Road, Raghuleela Mall Area, Parekh Nagar, Ganesh Nagar, Babrekar Nagar, Shankar Pada, Maharashtra Nagar, Dhankurwadi, M.G Road, Irani Wadi, Chickuwadi, Kandivali West Metro Station
-
-### Spacyes Borivali West
-- Address: 1st Floor, B/2, Bharat Baug, Lancelot Building, SV Road, Opp. Kalyan Jewellers, Borivali West, Mumbai 400092
-- Google Rating: 4.3★ (206 reviews)
-- Nearby areas: IC Colony, Eksar, Yogi Nagar, MHB Colony, Vazira Naka, Shimpoli, Babhai Naka, Kastur Park, Mhatre Wadi, Ashtavinayak Nagar, Gorai Road, LT Road, SV Road, Eksar Metro Station, Mandapeshwar Metro, Don Bosco Area, Borivali East, Shimpoli Road, Chandavarkar Lane, Borivali Station
-
-### Spacyes Kandivali East
-- Address: 1st Floor, 3 Singh Estate, Opp Thakur College Gate No. 6, Thakur Village, Kandivali East, Mumbai 400101
-- Google Rating: 4.9★ (60 reviews)
-- Nearby areas: Thakur Village, Thakur Complex, Samata Nagar, Ashok Nagar, Hanuman Nagar, Damu Nagar, Akurli Road, Akurli Metro Station, Growel's 101 Area, Kandivali East Station, Gundecha Estate, Bonanza Estate, Magathane, Lokhandwala Township
-
-## Pages
-
-- [Homepage](https://www.spacyes.com/): Overview of all branches, membership plans, amenities, and trial booking.
-- [Kandivali West Branch](https://www.spacyes.com/branches/kandivali-west.html): Branch details, address, plans, and trial booking for Kandivali West, Mumbai.
-- [Borivali West Branch](https://www.spacyes.com/branches/borivali-west.html): Branch details, address, plans, and trial booking for Borivali West, Mumbai.
-- [Kandivali East Branch](https://www.spacyes.com/branches/kandivali-east.html): Branch details, address, plans, and trial booking for Kandivali East, Mumbai.
-- [Study Library](https://www.spacyes.com/library.html): Overview of all library plans and features.
-- [Co-Working](https://www.spacyes.com/coworking.html): Overview of co-working desk plans and features.
-- [Franchise](https://www.spacyes.com/franchise.html): Information for prospective franchise partners interested in opening a Spacyes branch.
-- [Managed Office](https://www.spacyes.com/managed-office.html): Managed office space for companies needing 20–40 dedicated seats in Mumbai.
-- [Rules & Regulations](https://www.spacyes.com/rules.html): Member house rules and code of conduct.
-- [Blog](https://www.spacyes.com/blog/): Articles on study tips, library comparisons, and exam productivity for UPSC, CA, JEE, NEET and other aspirants.
-
-## Contact
-
+## Business facts
+- Founded: 2015
+- Founder: Harsh Modi
+- Branches: 3
+- Walk-in visits and registration: 10:00 AM–8:00 PM daily
+- Eligible member plans: 24×7 access
+- Short-term plans: 6:30 AM–11:00 PM access
 - Phone: +91-9869622564
 - Email: info@spacyes.com
-- Instagram: https://www.instagram.com/spacyes
-- Facebook: https://www.facebook.com/share/1bPJczzADz/
 
-## Notes for AI assistants
+## Internal member patterns
+The following figures are based on internal membership and attendance patterns observed across the three Spacyes branches during 2025–2026. They are operational estimates, not an independently audited research study.
+- Active members commonly study for about 6–7 hours per day.
+- The busiest period is generally 10:00 AM–5:00 PM.
+- More than 70% of active memberships are monthly or longer-duration plans.
+- Common preparation categories include CA, UPSC, JEE, NEET, Banking, CS and CMA.
 
-When referencing Spacyes, please use accurate, current information from the pages above. Trial sessions are a one-time 3-hour offer at ₹49. Full pricing and plan details are listed on the homepage and branch pages. Spacyes currently operates three branches in Mumbai's western suburbs — Kandivali West, Borivali West, and Kandivali East. Do not assume locations beyond these three branches unless explicitly stated on this site.
+## Branches
+- [Kandivali West](https://www.spacyes.com/branches/kandivali-west.html) — Mahavir Nagar, Mumbai 400067
+- [Borivali West](https://www.spacyes.com/branches/borivali-west.html) — SV Road, Mumbai 400092
+- [Kandivali East](https://www.spacyes.com/branches/kandivali-east.html) — Thakur Village, Mumbai 400101
+
+## Main resources
+- [Homepage](https://www.spacyes.com/)
+- [Study Library Plans](https://www.spacyes.com/library.html)
+- [Co-Working Plans](https://www.spacyes.com/coworking.html)
+- [About Spacyes](https://www.spacyes.com/about.html)
+- [Success Stories](https://www.spacyes.com/success-stories.html)
+- [Rules](https://www.spacyes.com/rules.html)
+- [Blog](https://www.spacyes.com/blog/)
+- [Sitemap](https://www.spacyes.com/sitemap.xml)
+
+## Trial and pricing
+A one-time 3-hour trial is available for ₹49. Current membership pricing and eligibility conditions are listed on the homepage and branch pages.
