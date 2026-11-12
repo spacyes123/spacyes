@@ -22,19 +22,19 @@ The following figures are based on internal membership and attendance patterns o
 - Common preparation categories include CA, UPSC, JEE, NEET, Banking, CS and CMA.
 
 ## Branches
-- [Kandivali West](https://www.spacyes.com/branches/kandivali-west.html) — Mahavir Nagar, Mumbai 400067
-- [Borivali West](https://www.spacyes.com/branches/borivali-west.html) — SV Road, Mumbai 400092
-- [Kandivali East](https://www.spacyes.com/branches/kandivali-east.html) — Thakur Village, Mumbai 400101
+- [Kandivali West](https://spacyes.com/branches/kandivali-west) — Mahavir Nagar, Mumbai 400067
+- [Borivali West](https://spacyes.com/branches/borivali-west) — SV Road, Mumbai 400092
+- [Kandivali East](https://spacyes.com/branches/kandivali-east) — Thakur Village, Mumbai 400101
 
 ## Main resources
-- [Homepage](https://www.spacyes.com/)
-- [Study Library Plans](https://www.spacyes.com/library.html)
-- [Co-Working Plans](https://www.spacyes.com/coworking.html)
-- [About Spacyes](https://www.spacyes.com/about.html)
-- [Success Stories](https://www.spacyes.com/success-stories.html)
-- [Rules](https://www.spacyes.com/rules.html)
-- [Blog](https://www.spacyes.com/blog/)
-- [Sitemap](https://www.spacyes.com/sitemap.xml)
+- [Homepage](https://spacyes.com/)
+- [Study Library Plans](https://spacyes.com/library)
+- [Co-Working Plans](https://spacyes.com/coworking)
+- [About Spacyes](https://spacyes.com/about)
+- [Success Stories](https://spacyes.com/success-stories)
+- [Rules](https://spacyes.com/rules)
+- [Blog](https://spacyes.com/blog/)
+- [Sitemap](https://spacyes.com/sitemap.xml)
 
 ## Trial and pricing
 A one-time 3-hour trial is available for ₹49. Current membership pricing and eligibility conditions are listed on the homepage and branch pages.
