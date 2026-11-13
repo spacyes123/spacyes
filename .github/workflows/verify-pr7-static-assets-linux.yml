@@ -1,0 +1,131 @@
+name: Verify PR7 static assets on Linux
+run-name: Verify PR7 c1fe3fa on Ubuntu and Node 22
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.repository == 'spacyes123/spacyes'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    env:
+      PR7_SHA: c1fe3fa6ab2f8a666b4f2a57bfccb7025a6d6a48
+      NO_COLOR: '1'
+
+    steps:
+      - name: Check out the audited PR7 commit, not the dispatch branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: spacyes123/spacyes
+          ref: c1fe3fa6ab2f8a666b4f2a57bfccb7025a6d6a48
+          fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+
+      - name: Verify target, clean checkout and integration-test prerequisites
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$PR7_SHA"
+          test "$(node -p 'process.platform')" = linux
+          test "$(node -p 'process.versions.node.split(".")[0]')" = 22
+          test "$(git rev-parse --is-shallow-repository)" = false
+          test -z "$(git status --porcelain --untracked-files=all)"
+          command -v git
+          command -v tar
+          # This public repository can be fetched without persisted credentials.
+          git fetch --no-tags origin '+refs/heads/main:refs/remotes/origin/main'
+          git show-ref --verify refs/remotes/origin/main
+          git merge-base HEAD origin/main
+          test -f scripts/stage-public-assets.test.mjs
+          test -f scripts/stage-public-assets.mjs
+          test -f scripts/public-assets.json
+
+      - name: Run the complete pinned test suite
+        run: |
+          set -euo pipefail
+          node --test --test-reporter=tap scripts/stage-public-assets.test.mjs \
+            | tee "$RUNNER_TEMP/spacyes-pr7-staging-tests.tap"
+
+      - name: Require exactly 43 passes, zero failures and zero skips
+        run: |
+          set -euo pipefail
+          node --input-type=module - <<'NODE'
+          import assert from 'node:assert/strict';
+          import { readFileSync, appendFileSync } from 'node:fs';
+          import path from 'node:path';
+
+          const tap = readFileSync(path.join(process.env.RUNNER_TEMP, 'spacyes-pr7-staging-tests.tap'), 'utf8');
+          assert.match(tap, /^TAP version 13\r?$/m, 'Missing TAP report');
+          assert.doesNotMatch(tap, /^\s*not ok\b/m, 'A test failed');
+          assert.doesNotMatch(tap, /^\s*(?:not )?ok\b[^\n]*#\s*(?:SKIP|TODO)\b/im,
+            'Skipped/TODO security test');
+          for (const [metric, expected] of Object.entries({
+            tests: 43, pass: 43, fail: 0, cancelled: 0, skipped: 0, todo: 0,
+          })) {
+            const matches = [...tap.matchAll(new RegExp(`^# ${metric} (\\d+)\\s*$`, 'gm'))];
+            assert.equal(matches.length, 1, `Missing or ambiguous ${metric} summary`);
+            assert.equal(Number(matches[0][1]), expected, `Unexpected ${metric} count`);
+          }
+          console.log('PASS: exactly 43 tests passed with zero skips, TODOs, cancellations or failures.');
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            `Verified PR #7 commit \`${process.env.PR7_SHA}\`: **43 passed, zero skipped/failed**.\n\n`);
+          NODE
+
+      - name: Stage and independently verify all 46 approved public files
+        run: |
+          set -euo pipefail
+          node scripts/stage-public-assets.mjs
+          node --input-type=module - <<'NODE'
+          import assert from 'node:assert/strict';
+          import { lstat, readdir, readFile } from 'node:fs/promises';
+          import { appendFileSync } from 'node:fs';
+          import path from 'node:path';
+          import { verifyPublicAssets } from './scripts/stage-public-assets.mjs';
+
+          const manifest = JSON.parse(await readFile('scripts/public-assets.json', 'utf8'));
+          assert.equal(manifest.length, 46);
+          assert.equal(new Set(manifest).size, 46);
+          const files = [];
+          async function walk(directory) {
+            for (const name of await readdir(directory)) {
+              const entry = path.join(directory, name);
+              const stat = await lstat(entry);
+              assert(!stat.isSymbolicLink(), `Symlink in staged output: ${entry}`);
+              if (stat.isDirectory()) await walk(entry);
+              else {
+                assert(stat.isFile(), `Non-regular staged file: ${entry}`);
+                files.push(path.relative('public', entry).split(path.sep).join('/'));
+              }
+            }
+          }
+          await walk('public');
+          assert.deepEqual(files.sort(), [...manifest].sort());
+          for (const file of files) {
+            assert(!file.split('/').some(part => part.startsWith('.')), `Hidden path: ${file}`);
+            assert(!/^(?:docs\/|scripts\/|node_modules\/|CNAME$|CHANGELOG\.md$|wrangler\.)/.test(file),
+              `Non-public file: ${file}`);
+            assert((await readFile(path.join('public', file))).equals(await readFile(file)),
+              `Source/staged bytes differ: ${file}`);
+          }
+          const result = await verifyPublicAssets();
+          assert.equal(result.files, 46);
+          console.log(`PASS: ${result.files} approved files; exact paths, hierarchy and original bytes verified.`);
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            '**46 public files** verified against manifest and original source bytes. No assets uploaded.\n');
+          NODE
+          git check-ignore --quiet public/index.html
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain --untracked-files=all)"
