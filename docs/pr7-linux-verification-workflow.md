@@ -67,6 +67,11 @@ default branch before it can be triggered. Therefore this new workflow cannot be
 run while it exists only in this draft PR. Neither adding automatic triggers nor
 merging anything is part of preparing this workflow.
 
+A future merge/push to main can trigger the repository's existing Cloudflare or
+GitHub Pages integrations independently of this manual workflow. This workflow
+does not disable or control those integrations. Review and approve that bootstrap
+separately; do not assume merging a verification-only file is deployment-free.
+
 After a separately approved merge makes the workflow available on `main`:
 
 1. Open the repository's **Actions** tab.
