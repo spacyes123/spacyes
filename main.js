@@ -138,7 +138,7 @@ document.querySelectorAll('.form-wrap[id]').forEach(function(form){wireForm(form
 (function(){
   if(!document.querySelector('.mobile-action-bar')){
     var bar=document.createElement('div');bar.className='mobile-action-bar';bar.setAttribute('aria-label','Quick contact actions');
-    bar.innerHTML='<a href="https://spacyes.com/#plans">View Plans</a><a href="tel:+919869622564">Call</a><a class="wa-action" href="https://wa.me/919869622564?text='+encodeURIComponent('Hi Spacyes, I need help choosing a membership plan.')+'" target="_blank" rel="noopener">WhatsApp</a>';
+    bar.innerHTML='<a href="/#plans">View Plans</a><a href="tel:+919869622564">Call</a><a class="wa-action" href="https://wa.me/919869622564?text='+encodeURIComponent('Hi Spacyes, I need help choosing a membership plan.')+'" target="_blank" rel="noopener">WhatsApp</a>';
     document.body.appendChild(bar);
   }
   if(!document.querySelector('.wa-help')){
