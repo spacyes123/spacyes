@@ -4,3 +4,4 @@
 /.cloudflare/
 /.dev.vars*
 /.env*
+/staging-tests.tap
