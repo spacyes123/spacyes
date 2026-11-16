@@ -22,12 +22,8 @@ export async function validateCloudflareConfig(config) {
   const ajv = new Ajv({ allErrors: true, strict: false, validateFormats: false });
   const validate = ajv.compile(schema);
   assert(validate(data), `Pinned Wrangler schema rejected config: ${JSON.stringify(validate.errors)}`);
-  // JSON is valid JSONC. Keep this reviewed file comment-free so it can be parsed
-  // without a second JSONC dependency, and restrict it to the audited fields.
-  // This file is the code-reviewed production-settings baseline. Reconciliation
-  // must update it and tests in the same PR; no env/file overlay is accepted.
-  // Explicit bounded observability fields can be reconciled without allowing
-  // arbitrary bindings, routes, Worker code, preview settings or runtime vars.
+  // JSON is valid JSONC. Keep identity and publication boundaries explicit;
+  // additional production settings need a reviewed config/test update.
   const { observability, ...core } = data;
   assert.deepEqual(core, expected, 'Unexpected routing, binding, runtime or identity setting');
   if (observability !== undefined) {
@@ -47,7 +43,7 @@ export async function validateCloudflareConfig(config) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     await validateCloudflareConfig();
-    console.log('Wrangler 4.161.0 schema and reviewed static-assets invariants passed. This is NOT production approval.');
+    console.log('Wrangler 4.161.0 schema and static-assets checks passed.');
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

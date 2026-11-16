@@ -55,7 +55,7 @@ for (const route of [
   '/missing-local-qa', '/blog/missing-local-qa', '/CNAME', '/CHANGELOG.md',
   '/.gitattributes', '/.git/config', '/wrangler.jsonc', '/package.json',
   '/package-lock.json', '/scripts/stage-public-assets.mjs',
-  '/docs/cloudflare-configuration-release-plan.md',
+  '/README.md', '/scripts/build.mjs', '/node_modules/wrangler/package.json',
 ]) {
   const response = await responseFor(route);
   assert.equal(response.status, 404, route);
