@@ -1,0 +1,98 @@
+name: Website CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Static website checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      WRANGLER_SEND_METRICS: 'false'
+      WRANGLER_LOG_PATH: ${{ runner.temp }}/wrangler-local.log
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Record checkout and prerequisites
+        run: |
+          node --version
+          git --version
+          tar --version
+          git rev-parse HEAD
+          git show-ref --verify refs/remotes/origin/main
+      - run: npm ci --include=dev
+      - name: Security tests, build and configuration validation
+        run: npm run test:linux
+      - name: Verify exact publication inventory and source bytes
+        run: node scripts/verify-publication.mjs
+      - name: Check local routing without deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          log_file="$RUNNER_TEMP/spacyes-local-server.log"
+          setsid npm run dev > "$log_file" 2>&1 &
+          server_pid=$!
+          trap 'kill -- -"$server_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl -fsS --max-time 2 -o /dev/null http://127.0.0.1:8797/; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then cat "$log_file"; exit 1; fi
+          npm run test:routing || { cat "$log_file"; exit 1; }
+      - name: Reject source mutations
+        run: |
+          git diff --check
+          git diff --exit-code
+
+  deployment-result:
+    name: Cloudflare deployment result
+    if: github.repository == 'spacyes123/spacyes' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      checks: read
+    steps:
+      - name: Observe the existing Cloudflare check (no deployment)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 40); do
+            check=$(gh api "repos/$GITHUB_REPOSITORY/commits/$RELEASE_SHA/check-runs?per_page=100" \
+              --jq '[.check_runs[] | select(.name == "Workers Builds: spacyes" and .app.slug == "cloudflare-workers-and-pages")] | sort_by(.id) | last')
+            if [ "$check" != null ] && [ -n "$check" ]; then
+              status=$(jq -r '.status' <<< "$check")
+              if [ "$status" = completed ]; then
+                conclusion=$(jq -r '.conclusion' <<< "$check")
+                details=$(jq -r '.details_url' <<< "$check")
+                printf 'Cloudflare check for `%s`: **%s**. [Build details](%s)\n' "$RELEASE_SHA" "$conclusion" "$details" >> "$GITHUB_STEP_SUMMARY"
+                if [ "$conclusion" = success ]; then exit 0; fi
+                echo "::error::Cloudflare build/deployment check failed for $RELEASE_SHA ($conclusion). $details"
+                exit 1
+              fi
+            fi
+            sleep 15
+          done
+          echo "::error::No successful Cloudflare build/deployment check observed for $RELEASE_SHA within 10 minutes. Inspect Workers Builds before retrying."
+          printf 'Deployment was **not confirmed** for `%s`. During initial setup this is expected while Cloudflare automatic builds remain disabled.\n' "$RELEASE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          exit 1
