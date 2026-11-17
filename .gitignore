@@ -1,0 +1,7 @@
+/public/
+/node_modules/
+/.wrangler/
+/.cloudflare/
+/.dev.vars*
+/.env*
+/staging-tests.tap
