@@ -9,6 +9,7 @@ const expected = {
   $schema: './node_modules/wrangler/config-schema.json',
   name: 'spacyes',
   compatibility_date: '2026-11-10',
+  previews: {},
   assets: {
     directory: './public',
     html_handling: 'auto-trailing-slash',
