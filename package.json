@@ -7,11 +7,12 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "npm run build && node --test scripts/stage-public-assets.test.mjs scripts/build.test.mjs scripts/branch-membership.test.mjs",
+    "test": "npm run build && node --test scripts/stage-public-assets.test.mjs scripts/build.test.mjs scripts/branch-membership.test.mjs scripts/enquiry-conversion.test.mjs",
     "dev": "npm run build && wrangler dev --local --ip 127.0.0.1 --port 8797 --show-interactive-dev-session=false",
-    "test:linux": "node scripts/verify-linux-staging.mjs && npm run build && node --test scripts/build.test.mjs scripts/branch-membership.test.mjs",
+    "test:linux": "node scripts/verify-linux-staging.mjs && npm run build && node --test scripts/build.test.mjs scripts/branch-membership.test.mjs scripts/enquiry-conversion.test.mjs",
     "test:routing": "node scripts/check-local-routing.mjs",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "test:enquiry-browser": "npm run build && node scripts/enquiry-browser-check.cjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",
