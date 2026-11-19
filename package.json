@@ -7,9 +7,9 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "npm run build && node --test scripts/stage-public-assets.test.mjs scripts/build.test.mjs",
+    "test": "npm run build && node --test scripts/stage-public-assets.test.mjs scripts/build.test.mjs scripts/branch-membership.test.mjs",
     "dev": "npm run build && wrangler dev --local --ip 127.0.0.1 --port 8797 --show-interactive-dev-session=false",
-    "test:linux": "node scripts/verify-linux-staging.mjs && npm run build && node --test scripts/build.test.mjs",
+    "test:linux": "node scripts/verify-linux-staging.mjs && npm run build && node --test scripts/build.test.mjs scripts/branch-membership.test.mjs",
     "test:routing": "node scripts/check-local-routing.mjs",
     "deploy": "npm run build && wrangler deploy"
   },
