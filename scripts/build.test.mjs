@@ -11,6 +11,7 @@ test('production configuration matches pinned Wrangler and existing static routi
   const config = await validateCloudflareConfig();
   assert.equal(config.name, 'spacyes');
   assert.equal(config.compatibility_date, '2026-11-10');
+  assert.deepEqual(config.previews, {});
   assert.deepEqual(config.assets, {
     directory: './public', html_handling: 'auto-trailing-slash', not_found_handling: 'none',
   });
@@ -23,7 +24,10 @@ test('reject unsafe publication, routing, bindings and unreviewed settings', asy
     { name: 'other-worker' }, { compatibility_date: '2026-11-13' },
     { assets: { ...config.assets, directory: '.' } },
     { assets: { ...config.assets, not_found_handling: 'single-page-application' } },
-    { routes: ['*/*'] }, { main: 'main.js' }, { previews: {} },
+    { routes: ['*/*'] }, { main: 'main.js' },
+    { previews: undefined }, { previews: null }, { previews: [] },
+    { previews: { vars: { ENVIRONMENT: 'preview' } } },
+    { previews: { kv_namespaces: [] } },
     { vars: { SECRET: 'x' } }, { kv_namespaces: [] },
     { observability: { enabled: 'true' } }, { observability: { head_sampling_rate: 2 } },
     { observability: { anything: true } }, { observability: null },

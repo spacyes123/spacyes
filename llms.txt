@@ -5,21 +5,22 @@
 Last updated: 2026-07-15
 
 ## Business facts
-- Founded: 2015
+- Established in 2015
 - Founder: Harsh Modi
 - Branches: 3
+- Google rating: 4.7/5 Average Google Rating Across 3 Spacyes Locations
 - Walk-in visits and registration: 10:00 AM–8:00 PM daily
-- Eligible member plans: 24×7 access
-- Short-term plans: 6:30 AM–11:00 PM access
+- Eligible memberships of 7 days or longer: 24×7 study access, subject to entry restrictions
+- Entry and exit: New entry and re-entry are not permitted after 11:00 PM. Members already inside may continue studying overnight if their membership permits it, and may exit at any time.
+- Weekend membership: continuous study access from Saturday morning until Sunday at 11:00 PM, including Saturday overnight; no new entry or re-entry after 11:00 PM
+- Shorter-duration library plans and Any 30 Days: 6:30 AM–11:00 PM access; Any 30 Days is single-branch
+- Co-working day pass: 10:00 AM–8:00 PM
 - Phone: +91-9869622564
 - Email: info@spacyes.com
 
-## Internal member patterns
-The following figures are based on internal membership and attendance patterns observed across the three Spacyes branches during 2025–2026. They are operational estimates, not an independently audited research study.
-- Active members commonly study for about 6–7 hours per day.
-- The busiest period is generally 10:00 AM–5:00 PM.
-- More than 70% of active memberships are monthly or longer-duration plans.
-- Common preparation categories include CA, UPSC, JEE, NEET, Banking, CS and CMA.
+## Study and work
+- A Space Built for Focused Studying: Comfortable seating, a quiet environment and flexible memberships designed to support your study routine.
+- Study spaces support exam preparation, reading and individual work.
 
 ## Branches
 - [Kandivali West](https://spacyes.com/branches/kandivali-west) — Mahavir Nagar, Mumbai 400067
@@ -37,4 +38,11 @@ The following figures are based on internal membership and attendance patterns o
 - [Sitemap](https://spacyes.com/sitemap.xml)
 
 ## Trial and pricing
-A one-time 3-hour trial is available for ₹49. Current membership pricing and eligibility conditions are listed on the homepage and branch pages.
+A one-time 3-hour trial: ₹49. This is a separate, non-adjustable charge and will not be deducted from a future membership purchase. Current membership pricing and eligibility conditions are listed on the homepage and branch pages.
+
+Any 30 Days: ₹4,799. Choose 30 study days within a 180-day validity period instead of using 30 consecutive days. Regular Monthly membership remains ₹2,999 for 30 consecutive days.
+
+All Spacyes memberships are non-refundable, non-transferable and cannot be extended, paused or placed on hold. Membership validity continues from the applicable start date regardless of attendance.
+
+## Calling policy
+Voice and video calls are strictly prohibited inside all Reading Halls. At Kandivali East, calls are also prohibited in the coworking area. At Kandivali West and Borivali West, voice and video calls are permitted in the coworking areas, provided they do not disturb other members. Silent mobile phone usage is permitted if it does not disturb other members.

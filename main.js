@@ -135,6 +135,23 @@ window.location.href='mailto:info@spacyes.com?subject='+encodeURIComponent(subj)
 })}
 }
 document.querySelectorAll('.form-wrap[id]').forEach(function(form){wireForm(form.id)});
+// Use the existing branch enquiry forms for the plan shown on each card.
+(function(){
+var quick=document.getElementById('form-branch-quick'),full=document.getElementById('form-branch');
+if(!quick||!full)return;
+var choice=quick.querySelector('select[name="plan"]'),selected=full.querySelector('[name="plan"]');
+document.querySelectorAll('.branch-membership-grid .plan-btn,.branch-coworking-grid .plan-btn').forEach(function(button){
+button.addEventListener('click',function(){
+var card=button.closest('.plan-card'),label=card&&card.querySelector('.plan-nm');
+if(!label||!choice||!selected)return;
+var name=label.textContent.trim();
+if(!Array.from(choice.options).some(function(option){return option.value===name}))return;
+choice.value=name;selected.value=name;
+full.querySelectorAll('.pill').forEach(function(pill){pill.classList.toggle('on',pill.dataset.val===name)});
+});
+});
+})();
+
 (function(){
   if(!document.querySelector('.mobile-action-bar')){
     var bar=document.createElement('div');bar.className='mobile-action-bar';bar.setAttribute('aria-label','Quick contact actions');
